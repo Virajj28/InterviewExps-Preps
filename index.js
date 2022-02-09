@@ -118,3 +118,13 @@
 // const cannot be re-assgined
 // avoid using var
 
+
+//  Conditions
+function evenOrOdd(number) {
+    if (number%2){
+        return ('odd')
+    } else return ('even')
+    }
+
+    console.log(evenOrOdd(7))
+
