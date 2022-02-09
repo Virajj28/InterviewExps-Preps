@@ -150,3 +150,34 @@
 // }
 // loopThroughElements(["Sam", "Charlie", "Alex"]); // should log every name to the console
 
+
+// Arrays 2 & Callbacks
+
+// function getYear(years,searchYear){
+//     return years.find(function(year){
+//         return year === searchYear
+//     })
+// }
+// console.log(getYear([2019, 2020, 2021], 2020)); // 2020
+
+// function getOddYears(years){
+//     return years.filter(function(year){
+//         return year %2 !==0;
+//     })
+// }
+// console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
+
+// function isAppUsed(apps,app){
+//     return apps.includes(app);
+// }
+// console.log(isAppUsed(["Twitter", "Calculator"], "Calclator")); // false
+
+function getVotersCount(ages) {
+    return ages.filter(
+        function(age){
+            return age<=18
+        }
+    ).length;
+ }
+
+ console.log(getVotersCount([18, 20, 16, 21, 17, 19, 65, 63, 64, 61, 17])); // 4
