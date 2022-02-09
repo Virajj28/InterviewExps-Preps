@@ -120,11 +120,33 @@
 
 
 //  Conditions
-function evenOrOdd(number) {
-    if (number%2){
-        return ('odd')
-    } else return ('even')
-    }
+// function evenOrOdd(number) {
+//     if (number%2){
+//         return ('odd')
+//     } else return ('even')
+//     }
 
-    console.log(evenOrOdd(7))
+//     console.log(evenOrOdd(7))
+
+
+
+// Arrays 1
+// function getNumberOfElements(ele){
+//     return ele.length;
+// }
+// console.log(getNumberOfElements(['a', 'b'])); // 3
+
+
+// function useCalculator(ele){
+//  ele.push("Calci")
+//  return ele
+// }
+// console.log(useCalculator(["Clock", "Twitter"])); // 
+
+// function loopThroughElements(elements){
+//     elements.forEach(function(element){
+//         console.log(element);
+//     })
+// }
+// loopThroughElements(["Sam", "Charlie", "Alex"]); // should log every name to the console
 
