@@ -106,8 +106,15 @@
 
 // Number.parseInt
 
-function getDivisionRemainderBy2(number) {
-    return number%2;
-    }
+// function getDivisionRemainderBy2(number) {
+//     return number%2;
+//     }
 
-    console.log(getDivisionRemainderBy2(7))
+//     console.log(getDivisionRemainderBy2(7))
+
+
+// Variables
+// let can be re assgined later on
+// const cannot be re-assgined
+// avoid using var
+
