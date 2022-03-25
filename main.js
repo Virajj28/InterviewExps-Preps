@@ -195,3 +195,24 @@
 
 // Pseudo Code:
 // String s input from user
+
+
+
+// # Visit Health => 
+Div onClick and Btn onClick
+useRef
+Difference between Props and states
+useEffect in depth , dependency arr
+useContext
+LazyLoading =>  bigger chunks while production build
+Error Boundary
+Infinite scrolling
+Debouncing
+JS question setTimeout , setInterval (you got confused)
+clearInterval, clearTimeout
+Virtual DOM
+useState change in useEffect
+useState in depth
+
+
+there are templates which take care of routes,redux flow has to take actions,services,helpers
