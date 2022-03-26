@@ -201,16 +201,20 @@
 // Difference between Props and states
 // useEffect in depth , dependency arr
 // useContext
-// LazyLoading =>  bigger chunks while production build
+// Code-splitting(React.lazy/LazyLoading =>)  bigger chunks while production build
 // Error Boundary
 // Infinite scrolling
 // Debouncing
 // JS question setTimeout , setInterval (you got confused)
-// clearInterval, clearTimeout
+// clearInterval, clearTimeout (code didn't remember)
 // Virtual DOM
 // useState change in useEffect
 // useState in depth
 // localStorage and sessionStorage
+// HOC asked once again gave ryt
+// Lifecycle methods 
+// Error Boundaries
+////// V.V.Imp => Memoization
 
 // => How workflow is managed
 // there are templates which take care of routes,redux flow has to take actions,services,helpers
