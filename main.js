@@ -168,12 +168,10 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-
 // Pseudo Code:
 // cin<<nums
 // Loop 
 // First_elem+sec_elem = target
-
 
 
 // Question 2: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -197,22 +195,22 @@
 // String s input from user
 
 
-
 // # Visit Health => 
-Div onClick and Btn onClick
-useRef
-Difference between Props and states
-useEffect in depth , dependency arr
-useContext
-LazyLoading =>  bigger chunks while production build
-Error Boundary
-Infinite scrolling
-Debouncing
-JS question setTimeout , setInterval (you got confused)
-clearInterval, clearTimeout
-Virtual DOM
-useState change in useEffect
-useState in depth
+// Div onClick and Btn onClick
+// useRef
+// Difference between Props and states
+// useEffect in depth , dependency arr
+// useContext
+// LazyLoading =>  bigger chunks while production build
+// Error Boundary
+// Infinite scrolling
+// Debouncing
+// JS question setTimeout , setInterval (you got confused)
+// clearInterval, clearTimeout
+// Virtual DOM
+// useState change in useEffect
+// useState in depth
+// localStorage and sessionStorage
 
-
-there are templates which take care of routes,redux flow has to take actions,services,helpers
+// => How workflow is managed
+// there are templates which take care of routes,redux flow has to take actions,services,helpers
