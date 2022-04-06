@@ -241,3 +241,15 @@
 // How do you create an object data type in JS ? What values go in that data-type ?
 // Splice function in JS ?
 // Do you know how to access you html element from JS ?
+
+
+
+///// Westside Angels => Overseas(Canada) opportunity
+// ReactJS... why use hooks ?
+// Writing JS in CSS.
+// ReactJS OR ReactTS ?
+// In js what we write more objects or classes ?
+// What do you think about code structure ?
+// ContextAPI hook ? Why to use in depth explanation ?
+// useEffect hook ? Tinkering about dependency array ? Eslint errors but anything fine to also use empty?
+// From scratch creating components ?
