@@ -218,3 +218,26 @@
 
 // => How workflow is managed
 // there are templates which take care of routes,redux flow has to take actions,services,helpers
+
+
+
+// #Blackcurrant labs =>
+// What do you understand by term CSS Flexbox ? List some attributes used in flexbox.
+// Do you know what is CSS Grid ?
+// Do you know what media queries are ? Give me specific value of media queries for mobile,tablet and desktop. 
+// Do you know any CSS selectors ? Give me some examples HOW DO YOU DEFINE EACH SELECTORS.
+// Do you know any more selectors other than psuedo ? 
+// Position VS Display  ..What values do you use any properties ?
+// display:none VS visibility:hidden
+// Difference between vh,vw, %
+// What do you understand by the term Viewport ?
+// Difference between inline, block, inline-block ?
+// Examples of pseudo elements and selectors ?
+// Difference between <link> <a> ?
+// Do you know anything about DOM ?
+// Layout tag, Void tag (Those tags which do not need to close), Formatting text tags
+// Merge two columns of first row ...Table-2 columns,3 rows- Merge 2 columns data in tr tag
+/////////JAVASCRIPT
+// How do you create an object data type in JS ? What values go in that data-type ?
+// Splice function in JS ?
+// Do you know how to access you html element from JS ?
