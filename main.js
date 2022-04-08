@@ -253,3 +253,5 @@
 // ContextAPI hook ? Why to use in depth explanation ?
 // useEffect hook ? Tinkering about dependency array ? Eslint errors but anything fine to also use empty?
 // From scratch creating components ?
+// Pure Components
+// Any other coding languages know such as. Java,Python,C++ ?
