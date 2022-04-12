@@ -255,3 +255,18 @@
 // From scratch creating components ?
 // Pure Components
 // Any other coding languages know such as. Java,Python,C++ ?
+
+
+//// ELevar Sports => Full-Stack Developer, Lower Parel
+//Resume Projects => Perfect Portrait
+// Me as a 5 year old explain me REST API. Apart from REST API any alternative
+// said SOAP === gave reply something called as GraphQL.
+// Hackathons => 2048 Game
+// Nodejs advantage & disadvantages => What would you prefer backend if not NodeJS 
+// MongoDB pros & cons => MongoDB or Other DB
+// Express => Addition of two numbers live coding
+// Debugging errors tool => Postman,Thunderclient
+// There's an error in backend server how would you move on forward ?
+// Tell me something about this Github daily coding streak.
+// Why to join a startup ?
+// How does your weekend looks like ?
