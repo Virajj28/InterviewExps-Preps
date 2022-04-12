@@ -1,9 +1,11 @@
 import './App.css'
+import Counter from './components/Counter'
 
 function App() {
     return (
-        <div className='text-lg text-center italic text-lime-600'>
-            Hello World !
+        <div className='text-lg text-center italic bg-lime-600'>
+            Hello World ! ==
+            <Counter />
         </div>
     );
 }
