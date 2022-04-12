@@ -1,26 +1,25 @@
 import { useState,useEffect } from "react";
 import { SearchIcon } from '@heroicons/react/solid'
+import { Menu } from '@headlessui/react'
 
 const DropDown = () => {
-
   const [data, setData]=useState([]);
 
   useEffect (() => {
     if(data.length === 0){
       fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
-      // .then(response => console.log(response))
+      .then(response => console.log(response))
       .then(response => setData(response))
     }
   })
 
   return (
     <div>
-      DropDown
       {
         data.map((item,i) => (
           <div key={i}>
-            {item.name}
+            {item.title}
           </div>
         ))
       }
@@ -36,7 +35,7 @@ const TextArea = () => {
   )
 }
 
-function SearchIcon() {
+function Searchicon() {
   return (
     <div className='bg-yellow-500 w-9'>
       <SearchIcon className="h-7 w-7 mx-1 text-black-500"/>
@@ -50,7 +49,7 @@ export default function Searchbar() {
     <div className="flex align-center justify-center">
       <DropDown />
       <TextArea />
-      <SearchIcon />
+      <Searchicon />
     </div>
   )
 }
