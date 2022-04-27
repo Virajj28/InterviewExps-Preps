@@ -11,4 +11,6 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
+// ## Query number1 and Query number2 output is displayed in strings.
+// eg. 1+1 = 2 ...output is displayed as 11
 // http://localhost:3000/?number1=1&number2=2
