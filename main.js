@@ -1,3 +1,4 @@
+--2022
 // # SlashRTC
 //Asked function callback, cons of it, React Lifecycle methods =>
 // function calc (num1,num2,callbackFunction){
@@ -270,3 +271,27 @@
 // Tell me something about this Github daily coding streak.
 // Why to join a startup ?
 // How does your weekend looks like ?
+
+-
+--2023
+//// Fashion TV India => Full-Stack Developer, Santacruz
+// On paper pesudo code:
+// Find non-repeatable character 
+function firstNonRepeatedCharacter(string) {
+    for (var i = 0; i < string.length; i++) {
+      var c = string.charAt(i);
+      if (string.indexOf(c) == i && string.indexOf(c, i + 1) == -1) {
+        return c;
+      }
+    }
+    return null;
+}
+// 1-15 traingular pattern
+'https://www.tutorialstonight.com/number-pattern-programs-in-javascript'
+
+// --Into Technical--
+// Asynchronous and Synchronous in JS =>
+'https://www.geeksforgeeks.org/synchronous-and-asynchronous-in-javascript/'
+// Event Delegation in JS =>
+'freecodecamp.org/news/event-delegation-javascript/'
+// Can do Animations in Pure JS ?!
