@@ -295,3 +295,31 @@ function firstNonRepeatedCharacter(string) {
 // Event Delegation in JS =>
 'freecodecamp.org/news/event-delegation-javascript/'
 // Can do Animations in Pure JS ?!
+
+
+////// Republic World TV => Backend Developer, Lower Parel
+// JS Questions: 
+// what is First order function
+// what is pure function
+// Define let keyword
+// then about var keyword
+// Explain hoisting
+
+// NodeJS Questions:
+// Explain asynchronous nature of javascript
+
+// On-Code Editor Solve this Question
+//  let A=[1, 2, 3, 4, 5] is given as an array
+ 
+// We need to rotate the array values based on the value provided
+// If D=2 is given as an argument, the existing array has to be changed like.. 
+ 
+// [3,4,5,1,2]
+
+const rotateArray = (d) => {
+  let x=[1, 2, 3, 4, 5]
+  console.log(x.findIndex[d])
+  return console.log(x.splice(d).concat(x));  
+};
+
+rotateArray(2);
