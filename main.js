@@ -323,3 +323,14 @@ const rotateArray = (d) => {
 };
 
 rotateArray(2);
+
+//////// Azent Overseas Education-MNC
+// React Questions Only: since data-driven
+// What is a prop ?
+// Pass props from one component to another
+// Got Stuck here: Render parent component from child component
+// Concept: Prop drilling
+// Difference between class-components and functional components
+// Higher order components
+// what is refs
+//  What do you mean by component mounting
