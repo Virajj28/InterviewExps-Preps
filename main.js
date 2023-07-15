@@ -334,3 +334,48 @@ rotateArray(2);
 // Higher order components
 // what is refs
 //  What do you mean by component mounting
+
+
+///// Shipyaari (big expectns)-Goregaon
+// JS: Questions
+  const person = {
+    name:"Himanshu",
+    age: 25,
+    amount: [100,101,102]
+  }
+
+  const personA = person;
+
+  person.amount[0] = 1000
+  console.log(personA)
+
+Output: const person = {
+	name:"Himanshu",
+	age: 25,
+	amount: [1000,101,102]
+}
+
+// DSA: 1 Question
+const input = [9,9,9]
+
+// const res = input.push();
+// console.log(res)
+Output: [1,0,0,0]
+
+// NodeJs: Stumbled for did it forgot stopping interval
+const timer = [1,2,3,4,5]
+
+for(let i =0; i < timer.length; i++){
+  // console.log(timer[i])
+setInterval(() => console.log(timer[i]), 1000)
+}
+
+Output: 1
+        2
+        3
+        4
+        5
+      
+// ReactJS: Pretty good one thinking on it not that much but reality check 
+// to get hands on dirty with code.
+Link: https://codesandbox.io/s/shipyaari-navbar-p9v5vj
