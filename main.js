@@ -379,3 +379,31 @@ Output: 1
 // ReactJS: Pretty good one thinking on it not that much but reality check 
 // to get hands on dirty with code.
 Link: https://codesandbox.io/s/shipyaari-navbar-p9v5vj
+
+
+////// Zeidler Group
+
+
+//// Neosoft Pvt Ltd
+// Difference between let, var, const
+// Let's say I had declared variable in const and defining same variable will it throw me error 
+// Solve a question: Achieve without using inbuilt methods
+const arr = [1,2,3,4,5,[6,7]];
+// arr.flatmap
+let arrNums = []
+for(let i=arr[0]; i < arr.length; i++){
+    arrNums.push(i)
+}
+
+console.log(arrNums)
+// Refer this it's good resource https://flexiple.com/javascript/flatten-array-javascript
+// Difference between spread operator & rest operator
+// Explain me destructuring
+// Difference between setTimeout & setInterval
+// Explain me recursion
+//  Can you use recursion in above given code:
+// Exact reference for code: https://stackoverflow.com/questions/37105824/javascript-recursion-for-loop-for-flattening-array
+// How can I achieve if optional paramter (?)
+// What is interface in typescript
+// How can you pass data in components ?
+// ---Out of React so panel changed---
