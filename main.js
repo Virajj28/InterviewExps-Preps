@@ -382,6 +382,21 @@ Link: https://codesandbox.io/s/shipyaari-navbar-p9v5vj
 
 
 ////// Zeidler Group
+// 1st Machine Round:(45mins)
+// 12 React,JS,DB,Logical Ques  -Complete
+// 1 HardJS Ques -Left
+// 2 Db Ques - 1stOne was Sum,Max,MIn and descending order & 2nd One Filter on letter of table value and ascending order
+
+// 2nd Technical Round: (1hr)
+// FE Dev:
+// What is hooks and its uses
+// Pass data into component => ContextAPI Provider
+// How ReactJS files are appear in production/web browsers
+
+// BE Dev:
+// What is indexing in db?
+// System design of Random Number shown to user
+// ---Had to say missed an opportunity from referral
 
 
 //// Neosoft Pvt Ltd
