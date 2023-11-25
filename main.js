@@ -422,3 +422,52 @@ console.log(arrNums)
 // What is interface in typescript
 // How can you pass data in components ?
 // ---Out of React so panel changed---
+
+
+
+///// Gray Matrix 
+// HTML & CSS Q's =>
+// What are meta tags in html ?
+// How can you navigate to some page using url in html ?
+//  How can you link other web page into ur web page ? iframe tag
+// Universal Selector in CSS ? 
+// Difference between inline, block, inline-block elements ?
+// How can you give linear gradient border in css ?
+// React Q's =>
+// What are Pure components in react ?
+// What are controllable & non-controllable components ?
+// What are props ?
+//  What is prop drilling ?
+// Round Coding =>
+// CodeSandBox React use map function
+//1.  Create a array of elements - Use map function and display in table 
+const students = [{
+  'id': 0,
+  'name': 'Viraj'
+},{
+  'id': 1,
+  'name': 'Raj'
+}]
+<table>
+  <><thead><th>Id</th><th>Name</th></thead><tbody>
+    {
+      // Counter question why mentioning key
+      students.map((std, id) => (
+        <td>{std.id}</td>
+        ,
+        <td>{std.name}</td>
+      ))
+    }
+  </tbody></>
+</table>
+
+// 2. Create a counter which autoIncrements it's value
+const [counter, setCounter] = useState(0);
+
+const autoIncrement = () => {
+  setCounter(counter + 1)
+}
+
+useEffect(() => {
+  setInterval(autoIncrement, 1000)
+}, [counter])
