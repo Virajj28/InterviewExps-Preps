@@ -448,25 +448,27 @@ const students = [{
   'id': 1,
   'name': 'Raj'
 }]
-  < table >
-  <><thead><th>Id</th><th>Name</th></thead><tbody>
-    {
-      // Counter question why mentioning key
-      students.map((std, id) => (
-        <td>{std.id}</td>
-        ,
-        <td>{std.name}</td>
-      ))
-    }
-  </tbody></>
-</table >
+
+return (
+  <table>
+    <><thead><th>Id</th><th>Name</th></thead><tbody>
+      {
+        // Counter question why mentioning key
+        students.map((std, id) => (
+          <td>{std.id}</td>
+          ,
+          <td>{std.name}</td>
+        ))
+      }
+    </tbody></>
+  </table >)
 
 // 2. Create a counter which autoIncrements it's value
-const [counter, setCounter] = useState(0);
+// const [counter, setCounter] = useState(0);
 
-const autoIncrement = () => {
-  setCounter(counter + 1)
-}
+// const autoIncrement = () => {
+//   setCounter(counter + 1)
+// }
 
 useEffect(() => {
   setInterval(autoIncrement, 1000)
@@ -476,11 +478,11 @@ useEffect(() => {
 ////////////////////////////
 // // // Fynd ==>> SDE1
 
-const a = {id: 1}
+const a = { id: 1 }
 a.id = 5
 // What will output id will be 5 or give error
 
-const a = {v: 1, b: 3}
+const a = { v: 1, b: 3 }
 a.v = 2
 a.b = 4
 
@@ -492,13 +494,17 @@ const initialObj = {
   d: [2, 3, 5]
 }
 
+function letss(p1, p2) {
+  console.log(p1, p2, ...p2)
+}
+letss(1, 2, 3, 4)
 
-OUTPUT - 
+OUTPUT -
 {
- "1" : ["a","c"],
- "2" : ['a', "b", "d"],
- "3" : ["a","b","d"],
- "5" : ["b","c","d"]
+  "1": ["a", "c"],
+  "2": ['a', "b", "d"],
+  "3": ["a", "b", "d"],
+  "5": ["b", "c", "d"]
 }
 
 // const objVals = Object.entries(initialObj)
@@ -525,3 +531,99 @@ for (const key in initialObj) {
 }
 
 console.log(result);
+
+// ----------------
+// ---Motilal Oswal---
+
+// ----------------
+// Quickwork
+
+// ----------------
+// ICICI Lombard
+
+// --------------------
+// NEOSOFT PVT-LTD //29th June
+
+// --Db table name as students
+// Viraj 60
+// Raj 40
+
+// Where => 
+
+// SELECT students WHERE marks <= 50
+// --O/p: Raj
+
+// SELECT students HAVING marks = 80
+// --o/p: false
+
+// Mongp => Aggregation
+
+// State Mgmt: Redux, Context Provider, UseState
+// About NextJS
+
+// Problem 1: 
+const obj1 = {
+  a: 1,
+  b: {
+    c: 2,
+    d: 3
+  }
+};
+
+const obj2 = {
+  b: {
+    c: 4,
+    e: 5
+  },
+  f: 6
+};
+
+// Merge obj1 and obj2 deeply
+// Result: { a: 1, b: { c: 4, d: 3, e: 5 }, f: 6 }
+
+// Tried solving
+console.log(Object.keys(obj1))
+// Soln:
+function deepMerge(target, source) {
+  // Iterate over all properties in the source object
+  for (let key in source) {
+    // Check if the property is an object
+    if (source[key] && typeof source[key] === 'object') {
+      // If the target property is also an object, merge recursively
+      if (target[key] && typeof target[key] === 'object') {
+        deepMerge(target[key], source[key]);
+      } else {
+        // Otherwise, copy the source property to the target
+        target[key] = JSON.parse(JSON.stringify(source[key]));
+      }
+    } else {
+      // If the property is not an object, copy it to the target
+      target[key] = source[key];
+    }
+  }
+}
+
+const mergedObj = JSON.parse(JSON.stringify(obj1)); // Create a deep copy of obj1
+deepMerge(mergedObj, obj2);
+console.log(mergedObj);
+
+// Problem 2:
+// Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+// Example 1:
+// Input: head = [1,2,3,3,4,4,5]
+// Output: [1,2,5]
+
+
+const head = [1, 2, 3, 3, 4, 4, 5]
+
+let newArr = []
+for (let i = 0; i < head.length; i++) {
+  if (head[i] != head[i - 1]) {
+    newArr.push(head[i])
+  } else {
+    newArr.pop(head[i])
+  }
+}
+console.log(newArr)
+
+
