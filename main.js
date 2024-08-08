@@ -626,4 +626,82 @@ for (let i = 0; i < head.length; i++) {
 }
 console.log(newArr)
 
+// -----------CashInvoice---------
 
+// Mantra Labs
+//In depth CORS
+
+// --------------------------
+// Just Dial- 08/08
+// Closures in JS
+// Promises in JS
+// Promise.all() & Promise.allSettled()
+// Explain Try Catch
+// React Lifecycle Methods
+// Props in React
+// Prop Drilling
+// Context Provider
+// Redux store question
+// How can you access in component A from redux store
+session: {username: 'Viraj'}
+
+
+//employee data
+//nodejs api => input username and password
+
+routes:
+app.route('/api/v1/user', userController.getUser)
+
+controller:
+getUser = (req, res) => {
+  const body = req.body
+  userService.validateUser(body)
+}
+
+service:
+validateUser = (body) => {
+  //const username = body.userName,
+  //const userPassword = body.userPassword
+
+  const { userName, password } = body;
+
+  if (password) {
+    const CheckUser = employeeData.find({
+      username: username
+      //password: password;
+    })
+    //CheckUser {username: 'Viraj'; password: ''}
+
+    if (CheckUser) {
+      return { success: true, message: 'User found' }
+    }
+    else if (checkuser.password !== password) {
+      return { success: true, message: 'Password is incorrect' }
+    }
+    else {
+      return { success: true, message: 'Password is not provided' }
+    }
+  }
+}
+
+// DB Basics &  Joins
+// => SELECT MAX(Salary), MIN(Salary), AVG(Salary) FROM EmployeeSalary
+
+// range 9000 150000
+// id, name, salary
+
+// SELECT EmpId, Salary FROM EmployeeSalary WHERE Salary RANGE(9000,15000) 
+
+const givarr=[1,2,3,55,66,2,55,66,66,0]
+
+let count = {}
+
+givarr.map(num => {
+  if(count[num]){
+    count[num]++
+  } else {
+    count[num] = 1
+  }
+})
+
+console.log(count)
