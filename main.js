@@ -777,3 +777,27 @@ family: [{ name: "Jane", relation: "Sister" }]
 // }
 
 console.log(flattenObject(obj))
+
+// HDFC Life
+// var x=10 //10 parent-scope
+// function f(){
+//     // console.log(x) //undefined
+//     // var x=10
+    
+//     // var x=10
+//     // console.log(x) //10
+//     var x = 20
+//     console.log(x)
+// }
+// f()
+
+// const x = 10
+// const y = x
+
+
+const x = {a: 10, b: 20}
+const y = x
+y.c = 30
+
+console.log(y)
+console.log(x)
