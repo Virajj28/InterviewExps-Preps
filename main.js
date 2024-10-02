@@ -705,3 +705,75 @@ givarr.map(num => {
 })
 
 console.log(count)
+
+
+// Famous Questions Object manipulators
+
+function flattenArr (arr) {
+  let res = []
+  function recur(newArr){
+      for(let i =0; i < newArr.length; i++){
+      if(Array.isArray(newArr[i])){
+        recur(newArr[i]) 
+      } else {
+          res.push(newArr[i])
+      }
+      }
+  }
+  recur(arr)
+  return res
+}
+
+// function flattenArr(arr){
+//     return arr.flat(3)
+// }
+
+console.log(flattenArr([1,2,[3,4,5,[6,7,[8,[9]]]]]))
+
+function flattenObject(obj, parentKey = '', result = {}) {
+for (let key in obj) {
+  if (obj.hasOwnProperty(key)) {
+    const newKey = parentKey ? `${parentKey}.${key}` : key;
+
+    // Check if the value is an object but not null and not an array
+    if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+      flattenObject(obj[key], newKey, result);
+    } else if (Array.isArray(obj[key])) {
+      obj[key].forEach((item, index) => {
+        if (typeof item === 'object') {
+          flattenObject(item, `${newKey}[${index}]`, result);
+        } else {
+          result[`${newKey}[${index}]`] = item;  // Directly add array values
+        }
+      });
+    } else {
+      result[newKey] = obj[key]; // Add non-object values directly
+    }
+  }
+}
+return result;
+}
+
+const obj = {
+name: "John",
+address: {
+  city: "New York",
+  zip: {
+    code: 10001,
+    plus4: 1234
+  }
+},
+age: 30,
+hobbies: ["Reading", "Traveling"],
+family: [{ name: "Jane", relation: "Sister" }]
+};
+
+// {
+//   "name": "John",
+//   "address.city": "New York",
+//   "address.zip.code": 10001,
+//   "address.zip.plus4": 1234,
+//   "age": 30
+// }
+
+console.log(flattenObject(obj))
