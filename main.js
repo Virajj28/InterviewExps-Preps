@@ -801,3 +801,70 @@ y.c = 30
 
 console.log(y)
 console.log(x)
+
+//////Factiwse
+-Assignment round:
+https://github.com/Virajj28/Factwise_Assesment
+
+-Coding Round:
+React, JS, React UI round
+https://github.com/Virajj28/InterviewExps-Preps/blob/main/factwise-r1/FetchSearchProducts.jsx
+
+-Problem Solving Round:
+//Problem Stmt 1
+There are several cards arranged in a row, and each card has an associated number of points. The points are given in the integer array `cardPoints`.
+	In one step, you can take one card from the beginning or from the end of the row. You have to take exactly k cards.
+	Your score is the sum of the points of the cards you have taken.
+	Given the integer array `cardPoints` and the integer k, return the maximum score you can obtain.
+ 
+Examples:
+Input: cardPoints = [1, 2, 3, 4, 5, 6, 1], k = 3  
+      Output: 12
+
+ // Approach:
+// -store cardpoints length in n variable
+// - max cardpoints sum
+// - let i=n-1 , j=k-1
+// - new variable newSum = max
+// - while(j>=0) 
+//   newSum = newSum - cardPoints[j--] + cardPoints[i--]
+//   max = Math.max(newSum, max)
+//  -return max
+ function maxCardPts(cardPoints, k){
+     let n = cardPoints.length;
+    //  let max = cardPoints.reduce((acc,val) => acc+val,0)
+    let max = 0
+    for(let i=0; i<k;i++){
+        max +=cardPoints[i]
+    }
+
+    //  console.log(max)
+     let i = n-1; j=k-1
+     let newSum = max
+     
+     while(j>=0){
+         newSum = newSum - cardPoints[j--] + cardPoints[i--]
+         max = Math.max(newSum, max)
+     }
+     return max
+ }
+
+  //Problm Stmt 2:  
+You are given an array of integers `nums`, there is a sliding window of size `k` which is moving from the very left of the array to the very right. You can only see the `k` numbers in the window. Each time the sliding window moves right by one position.
+Return the max of sliding window.
+Input: 
+"nums": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "k": 4  
+  "result": [4, 5, 6, 7, 8, 9, 10]
+ "nums": [1, 3, 1, 2, 0, 5], "k": 3  
+   "result": [3, 3, 2, 5]
+ -Approach:
+ - new variable newArr storing arr
+ - //i = nums-1, j=k-1 //
+ 
+ while(j>=0){
+        //  newEle = cardPoints[j--] + cardPoints[i--]
+         max = Math.max() //Comparison of 3 nums in arr
+     }
+ - newArr.push(Math.max())
+
+
