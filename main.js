@@ -868,3 +868,57 @@ Input:
  - newArr.push(Math.max())
 
 
+///////////////////Eccentric
+ReactJS questions
+Find longest substring question to solve
+Code Examples asking output
+Dbms Joins 
+Prototypes of JS 
+
+//////////////Synergy IT
+NodeJS Event Loop
+Explain Promises
+Promises.all() VS Promises.allSettled()
+Function Currying expln
+functionName(1stParam){
+	return function2Name(2ndParam){
+		console.log(1stParam+2ndParam)
+	}
+}
+functionName(1stparam)(2ndParam)
+Object.create() VS Object.assign()
+Prototype in JS
+React Lifecycle Methods
+
+////Problem Solving
+const arr = [1,2,4,5,6]
+// eg. target =5
+// output: 3
+
+// eg. target=7
+// output: 5
+
+// eg.target=3
+// output:2
+
+function findTargetIdx(ar, target) {
+    let left = 0;
+    let right = ar.length;
+
+    while (left < right) {
+        const mid = Math.floor((left + right) / 2);
+    console.log('this is mid', mid)
+        if (ar[mid] < target) {
+            left = mid + 1; // Move to the right half
+        } else {
+            right = mid; // Move to the left half
+        }
+    }
+
+    return left; // Left is the index where the target would be placed
+}
+
+console.log(findTargetIdx(arr,7))
+
+--UseCallback
+--UseDebounce (Working example scenario)
