@@ -922,3 +922,46 @@ console.log(findTargetIdx(arr,7))
 
 --UseCallback
 --UseDebounce (Working example scenario)
+
+
+///// Sleeksky technologies
+//Counter Comp
+import Button from "./Button";
+import { useState, useEffect } from "react";
+
+export default function Countdown() {
+  const [count, setCount] = useState(20.0);
+  const [iinterval, setIInterval] = useState(true);
+
+  useEffect(() => {
+    console.log(iinterval);
+    if (count > 0 && iinterval) {
+      const intervalId = setInterval(
+        () => setCount((count) => count - 0.01),
+        10
+      );
+      return () => {
+        clearInterval(intervalId);
+      };
+    }
+  }, [count, iinterval]);
+
+  const handlePausePlay = () => {
+    // console.log("hello");
+    setIInterval((iinterval) => !iinterval);
+  };
+
+  return (
+    <>
+      <div>Countdown: {Number(count).toFixed(2)}</div>
+      <Button handlePausePlay={handlePausePlay} />
+    </>
+  );
+}
+
+//Buttton
+export default function Button({ handlePausePlay }) {
+  return <button onClick={handlePausePlay}>Pause/Play</button>;
+}
+
+
