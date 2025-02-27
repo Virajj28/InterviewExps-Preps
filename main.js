@@ -965,20 +965,39 @@ export default function Button({ handlePausePlay }) {
   return <button onClick={handlePausePlay}>Pause/Play</button>;
 }
 
+///////Faraday
+---------------------------
+//update ques
+
 ///////Digital Trons
 -----------------------------------------------
-//Callback conversion to Promise Code
 
+//Questions:
+//Difference between UseCallback and UseMemo
+//Prop Drilling solution- in Depth with code explaination of Context Provider
+// Virtual DOM
+//Use Effect and React Cycle Methods--co-relation
+// Event Loop in NodeJS
+
+//Callback conversion to Promise Code
 function getData(callback) {
     setTimeout(() => callback("Data received"), 1000);
 }
-
+//You solved
 function getData (async() => {
     await new Promise((resolve,reject) => setTimeout(
         () => resolve("Data received"),1000)
         )
 })
- 
+//Correct way when you return Promise
+function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Data received"), 1000);
+    });
+}
+// Usage
+getData().then(data => console.log(data)); // Output: "Data received" after 1 second
+
 
 //Fetch to Completed state change
 import React from 'react'
@@ -990,8 +1009,8 @@ const Todos = () => {
 
   useEffect(() => {
     fetch('https://dummyjson.com/todos')
-      .then((response) => response.json())
-      .then((data) => setTodos(data))
+      .then((response) => response.json()) //Here I was calling data() well you should have JSON
+      .then((data) => setTodos(data)) //Optimised better version was when u store in state as data.todos
       .catch((err) => console.error(err))
   }, [])
 
@@ -1002,16 +1021,28 @@ const Todos = () => {
     // console.log(e)
   }
 
+///Handle Change should accept id
+ const handleChange = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };	
+
   return (
     <>
       {/* Todos */}
       {todos?.todos?.length > 0 &&
         todos?.todos?.map((todo) => (
           <>
+	   // <div key={todo.id}>
             <p key={todo.id}>
               {todo.id}: {todo.todo} - {todo.completed == true ? 'Yes' : 'No'}
             </p>
             <button onClick={handleChange}>Change Status</button>
+	   // <button onClick={() => handleChange(todo.id)}>Change Status</button>
+           // </div>
           </>
         ))}
     </>
