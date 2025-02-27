@@ -923,6 +923,7 @@ console.log(findTargetIdx(arr,7))
 --UseCallback
 --UseDebounce (Working example scenario)
 
+----2025
 
 ///// Sleeksky technologies
 //Counter Comp
@@ -964,4 +965,58 @@ export default function Button({ handlePausePlay }) {
   return <button onClick={handlePausePlay}>Pause/Play</button>;
 }
 
+///////Digital Trons
+-----------------------------------------------
+//Callback conversion to Promise Code
+
+function getData(callback) {
+    setTimeout(() => callback("Data received"), 1000);
+}
+
+function getData (async() => {
+    await new Promise((resolve,reject) => setTimeout(
+        () => resolve("Data received"),1000)
+        )
+})
+ 
+
+//Fetch to Completed state change
+import React from 'react'
+import {useState, useEffect} from 'react'
+
+// api = https://dummyjson.com/todos
+const Todos = () => {
+  const [todos, setTodos] = useState([])
+
+  useEffect(() => {
+    fetch('https://dummyjson.com/todos')
+      .then((response) => response.json())
+      .then((data) => setTodos(data))
+      .catch((err) => console.error(err))
+  }, [])
+
+  console.log('Todos', todos.todos)
+
+  const handleChange = (e) => {
+    console.log('CHange Status CLicked')
+    // console.log(e)
+  }
+
+  return (
+    <>
+      {/* Todos */}
+      {todos?.todos?.length > 0 &&
+        todos?.todos?.map((todo) => (
+          <>
+            <p key={todo.id}>
+              {todo.id}: {todo.todo} - {todo.completed == true ? 'Yes' : 'No'}
+            </p>
+            <button onClick={handleChange}>Change Status</button>
+          </>
+        ))}
+    </>
+  )
+}
+
+export default Todos
 
