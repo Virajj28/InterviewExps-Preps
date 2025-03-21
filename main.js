@@ -1059,3 +1059,41 @@ process.next.tick() , process.setImmediate()
 // setImmediate() schedules code to run after the current event loop phase, following I/O tasks, impacting execution timing.
 Callback
 RESTFUL API
+
+//Ignite Solutions
+
+
+// function outerFunc(name){
+//     return function innferFunc(lastName){
+//         console.log('Hi', firstName, lastName}
+//     }
+// }
+
+// const closureFn = outerFunc('Viraj')
+// closureFn('Jadhav')
+
+//print nos to 100
+//if divisible by 3 print a
+//if divisible by 5 print b
+//if divisble by 3 and 5  print ab
+
+// for(let i=1; i<=100; i++){
+//     console.log(i)
+//     if(i%3==0){
+//         console.log('Prnting a')
+//     }
+//     else if(i%5==0){
+//         console.log('Prnting b')
+//     }
+//     else(i%3==0 && i%5==0)
+//         console.log('Prnting ab')
+    
+// }
+
+let obj1 = "Viraj"
+let obj2 = obj1
+
+obj2="Jadhav"
+
+console.log(obj1,obj2)
+
