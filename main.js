@@ -1062,6 +1062,11 @@ RESTFUL API
 
 //Ignite Solutions
 
+//Infinite scrolling, Lazy Loading
+//Closures
+//Real DOM and Virtual DOM
+//Type of requesting apis
+//Data Transfer in the sense asking props and state, direct towards Context Provider
 
 // function outerFunc(name){
 //     return function innferFunc(lastName){
@@ -1097,3 +1102,18 @@ obj2="Jadhav"
 
 console.log(obj1,obj2)
 
+//------------Arya ai---------
+//Difference between function and promises
+//Aggregation in Mongodb
+const inputArr = [1,2,3,4,5,6,7,8,9]
+
+function rotateNumsAr (arr,k){ 
+    k = k % arr.length
+    let newArr=[]
+    for(let i=0; i< k; i++){
+        newArr.push(arr[i])
+    }
+    return arr.slice(k).concat(newArr)
+}
+
+console.log(rotateNumsAr(inputArr, 10))
