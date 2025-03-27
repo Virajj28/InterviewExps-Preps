@@ -1117,3 +1117,18 @@ function rotateNumsAr (arr,k){
 }
 
 console.log(rotateNumsAr(inputArr, 10))
+
+//-----------------Labelblind--------------
+//Closures
+//arr element product
+// arr.reduce((acc,curr)=> return acc*curr)
+
+//React Hooks 
+// useEffect hook syntax and counter app for increment button
+// flattenArray prob
+// Nodejs fs and events
+// Same client is requesting to generate same pdf to backend. How to stop it from generating again n again
+//=> Store pdf in AWS S3 bucket. Persist signedURL to db against client table. Check while requesting signedURL is present
+// If present then generateKeyURL and send as response. Else generate pdf.
+
+
