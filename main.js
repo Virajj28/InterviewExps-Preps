@@ -967,6 +967,10 @@ export default function Button({ handlePausePlay }) {
 
 ///////Faraday
 ---------------------------
+//How login authentication works
+//DB Optimizing technique => Sharding, Indexing
+//CAP Theorem
+//Salt	
 //update ques
 
 ///////Digital Trons
@@ -1132,3 +1136,12 @@ console.log(rotateNumsAr(inputArr, 10))
 // If present then generateKeyURL and send as response. Else generate pdf.
 
 
+//-----------NexSales-----------
+//remove duplicate array
+//expressjs route //get call
+//SequelizeORM transaction
+//Teacher,Students,Subjects db schema
+//Promises, syntax
+//React
+//Rendering, Reconcilation
+//State, useState, useEffect
