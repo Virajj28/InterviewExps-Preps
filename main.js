@@ -1145,3 +1145,14 @@ console.log(rotateNumsAr(inputArr, 10))
 //React
 //Rendering, Reconcilation
 //State, useState, useEffect
+
+
+//----Shapoorji Paalonji-----
+//microservice, microfrontend
+// Closures
+// Event loop in JS
+// JS in sync right ..how can we make it async..same Nodejs
+// Promises execution =>3 promise, 1 function how can we make it async
+// Multithreading
+// state VS props
+// Longest substring of palindrome
