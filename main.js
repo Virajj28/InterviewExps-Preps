@@ -1156,3 +1156,32 @@ console.log(rotateNumsAr(inputArr, 10))
 // Multithreading
 // state VS props
 // Longest substring of palindrome
+
+
+/////-------------Un-hush-----------
+
+// Given a string, return the first non-repeating character.
+// If none, return 
+//'leetcode'
+//checking index iterating thru string
+//includes [i]
+//return input[i]
+
+// Given an integer array nums, find the contiguous subarray which has the largest sum, and return that sum.
+//i
+// nums[i]
+
+//Closures
+// function outerFunction(name){
+//     return function inner(lname){
+//         console.log(`${name}`${lname}`)
+//     }
+// }
+// const inner = outerFunction('Viraj)
+// inner('J')
+
+//useMemo, useCallback
+//Event loop in Nodejs
+// Data structures used in Event loop
+//Audio file provided,transcript it, give summary
+//States
