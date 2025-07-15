@@ -1185,3 +1185,62 @@ console.log(rotateNumsAr(inputArr, 10))
 // Data structures used in Event loop
 //Audio file provided,transcript it, give summary
 //States
+
+/////-------------Bitkraft-----------
+//R1 =>
+//R2 =>
+//write a state mgmt callback function => useState
+import useState from 'react'
+
+function CompA(){
+const [name, setName]=useState('Viraj')
+
+return (
+    <>
+        CompA Name={name}
+        <CompB {setName} />
+    </>)
+}
+
+function CompB({setName}){
+    
+    const updateName = () => {
+        setName('Viraj Jadhav')
+    }
+    
+    return (
+        <button onClick=(updateName)>Update Name</button>
+        )
+}
+
+console.log("Try programiz.pro");
+
+//java script code to find the largest element in a nested array
+
+function largestEleminArr(arr){
+    let newArr=[]
+    let num=0
+    //first flattening this arr
+    
+    function recurr(ar){
+    for(let i =0; i<ar.length;i++){
+        // console.log(ar[i])
+        if(Array.isArray(ar[i])){
+            recurr(ar[i])
+        }else {
+            newArr.push(ar[i])
+        }
+    }}
+    recurr(arr)
+    
+    //comparing each elements
+    for(let j=0;j<newArr.length;j++){
+        if(newArr[j+1] > newArr[j]){
+            num = newArr[j+1]
+        } 
+    }
+    return num
+}
+
+console.log(largestEleminArr([1,2, [2,4,5], [2,3,4,], 4, 8]))
+console.log('new Arr', largestEleminArr([1,2, [2,4,5], [2,3,4, [ 2,4,5, [ 2,4,5, [ 2,4,5, [ 2,4,5 ] ] ] ], ], 4, 8, [ 2,4,5 ] ]))
