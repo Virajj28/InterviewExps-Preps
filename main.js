@@ -1244,3 +1244,63 @@ function largestEleminArr(arr){
 
 console.log(largestEleminArr([1,2, [2,4,5], [2,3,4,], 4, 8]))
 console.log('new Arr', largestEleminArr([1,2, [2,4,5], [2,3,4, [ 2,4,5, [ 2,4,5, [ 2,4,5, [ 2,4,5 ] ] ] ], ], 4, 8, [ 2,4,5 ] ]))
+
+------------------------
+ACC 23/09/2025
+//HTML,CSS,JS VS React
+//Redux VS Context Provider
+Nodejs Event Loop
+console.log('A');
+ 
+setTimeout(() => {
+  console.log('B');
+}, 0);
+ 
+Promise.resolve().then(() => {
+  console.log('C');
+});
+ 
+console.log('D');
+ 
+Promise.resolve().then(() => {
+  console.log('E');
+});
+ 
+setTimeout(() => {
+  console.log('F');
+}, 0);
+
+
+Result:
+A
+D
+B
+C
+E
+f
+
+//Ratelimiting
+Implementing Rate limiting using middleware
+//service
+Creating a middleware:
+15API requests getting hit
+Batch processing technique we will allow let's for now
+5API request to be process at one time
+other 10API request would be in pending state
+In 3 batches these 15 api request will be completed.
+
+
+app.use('./getAll', middleware,getController)
+
+
+Orders, Users
+All the users with highest amount of orders placed
+- Orders -> id, userid, amount,products, metadata
+- Users -> id, name, data
+
+//
+SELECT * FROM Orders of o, User of user WHERE o.userid = user.id
+
+AWS Lambda understanding -> API Gateway
+
+
