@@ -1272,12 +1272,11 @@ setTimeout(() => {
 
 
 Result:
-A
-D
-B
-C
-E
-f
+ADBCEF
+
+Right Result: ADCEBF
+That’s slightly off — because in Node.js 
+microtasks (Promise.then) are always executed before macrotasks (setTimeout).
 
 //Ratelimiting
 Implementing Rate limiting using middleware
@@ -1291,6 +1290,50 @@ In 3 batches these 15 api request will be completed.
 
 
 app.use('./getAll', middleware,getController)
+There are teo rate limiters: concurrency and time based
+Code solution:
+const express = require("express");
+const app = express();
+
+// Concurrency limiter configuration
+const MAX_CONCURRENT = 5;
+let activeCount = 0;
+const queue = [];
+
+function rateLimiter(req, res, next) {
+  if (activeCount < MAX_CONCURRENT) {
+    // Process immediately
+    activeCount++;
+    res.on("finish", () => {
+      // When response is done, free a slot
+      activeCount--;
+      if (queue.length > 0) {
+        const nextReq = queue.shift();
+        nextReq();
+      }
+    });
+    next();
+  } else {
+    // Push request into queue
+    queue.push(() => rateLimiter(req, res, next));
+  }
+}
+
+// Controller
+function getController(req, res) {
+  // Simulating async work
+  setTimeout(() => {
+    res.send(`Processed request at ${new Date().toISOString()}`);
+  }, 2000); // 2s delay to simulate work
+}
+
+// Middleware applied only to /getAll
+app.get("/getAll", rateLimiter, getController);
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
+
 
 
 Orders, Users
@@ -1300,6 +1343,15 @@ All the users with highest amount of orders placed
 
 //
 SELECT * FROM Orders of o, User of user WHERE o.userid = user.id
+
+Right answer:
+SELECT u.id, u.name, COUNT(o.id) AS total_orders
+FROM Users u
+JOIN Orders o ON o.userid = u.id
+GROUP BY u.id, u.name
+ORDER BY total_orders DESC;
+
+
 
 AWS Lambda understanding -> API Gateway
 
