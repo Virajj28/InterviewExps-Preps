@@ -1351,8 +1351,32 @@ JOIN Orders o ON o.userid = u.id
 GROUP BY u.id, u.name
 ORDER BY total_orders DESC;
 
-
-
 AWS Lambda understanding -> API Gateway
 
+
+//---------WAMA Technology-------
+// Write a Node.js function that takes an array of numbers and returns only the unique numbers in sorted order.
+
+// newArr where we store unique num
+// for loop which will sort nums
+
+function uniqNums(arr){
+     if(!Array.isArray(arr)){
+         console.log('Input is not an array type')
+		 //keep this in mind
+		 return []
+     }
+     
+    let newArr = []
+    let sort = arr.sort()
+    for(let i =0; i<sort.length;i++){
+        //   console.log(arr[i])
+          if(sort[i] !== sort[i+1]){
+              newArr.push(sort[i])
+          }
+    }
+    return newArr
+}
+
+console.log(uniqNums([5, 3, 8, 3, 1, 5]))
 
