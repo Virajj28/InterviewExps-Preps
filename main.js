@@ -1380,3 +1380,82 @@ function uniqNums(arr){
 
 console.log(uniqNums([5, 3, 8, 3, 1, 5]))
 
+
+//---------Quantique Metadata Private Limited-------
+console.log("Start");
+
+	setTimeout(() => {
+	  console.log("setTimeout 1");
+	}, 0);
+
+	Promise.resolve().then(() => {
+	  console.log("Promise 1");
+	});
+
+	setTimeout(() => {
+	  console.log("setTimeout 2");
+	  Promise.resolve().then(() => {
+		console.log("Promise inside setTimeout 2");
+	  });
+	}, 0);
+
+	Promise.resolve().then(() => {
+	  console.log("Promise 2");
+	});
+
+	console.log("End");
+
+// Result:
+// Start
+// End
+// Promise 1 
+// Promise 2
+// setTimeout 1
+// setTimeout 2
+// Promise inside setTimeout 2
+
+// ===================================
+// Input: pattern = "abba", str = "dog cat cat dog"
+// Output: true
+
+// Input: pattern = "abba", str = "dog cat cat fish"
+// Output: false
+
+// Input: pattern = "adda", str = "dog cat cat dog"
+// Output: true
+
+//Write a function which will return true/false based on pattern and str
+// Code:
+// 1=> having 2 vars assigning str to each  
+
+function checkPttrnStr(ptrn, str){
+    const enPtr = Object.entries(ptrn)
+    // const enStr = Object.entries(str)
+    console.log(enPtr, enStr)
+}
+
+console.log(checkPttrnStr("adda","dog cat cat dog"))
+
+
+// Input: [1, [2, [3, 4,[5,6,[7]]],8,9,[10,[11,12]]]]
+// Task: Flatten it to [1, 2, 3, 4, 5,6,7,8,9,10,11,12]
+
+function flattenArr(arr){
+    let newArr = []
+    
+    function recurr(nArr){
+    for(let i=0; i<nArr.length; i++){
+        if(Array.isArray(nArr[i])){
+            recurr(nArr[i])
+        }else {
+            newArr.push(nArr[i])
+        }
+    }
+    }
+    
+    recurr(arr)
+    return newArr
+}
+
+console.log(flattenArr([1, [2, [3, 4,[5,6,[7]]],8,9,[10,[11,12]]]]))
+
