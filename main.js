@@ -1459,3 +1459,78 @@ function flattenArr(arr){
 
 console.log(flattenArr([1, [2, [3, 4,[5,6,[7]]],8,9,[10,[11,12]]]]))
 
+R2=>
+
+- Nodejs Clusters
+- Event emitter, Thread pool
+-Nodejs api functions:
+| Module   | Common Functions                                        | Description            |
+| -------- | ------------------------------------------------------- | ---------------------- |
+| `fs`     | `fs.readFile()`, `fs.writeFile()`, `fs.readdir()`       | File system operations |
+| `path`   | `path.join()`, `path.resolve()`                         | File path utilities    |
+| `http`   | `http.createServer()`, `request.on()`, `response.end()` | Create HTTP servers    |
+| `os`     | `os.platform()`, `os.cpus()`, `os.totalmem()`           | OS info                |
+| `events` | `emitter.on()`, `emitter.emit()`                        | Event handling         |
+| `url`    | `new URL()`, `url.parse()`                              | URL utilities          |
+
+- nextTick, 
+- JS =>	IIFE,HO functions, Closures 	
+
+//Creating an index db syntax ques
+	
+	
+// isNaN("Hello")  
+// isNaN(345)   
+// isNaN('1')  
+// isNaN(true) 
+// isNaN(false) 
+// isNaN(undefined)
+
+
+// Result:
+// true
+// false
+// false
+// false
+// false
+// true
+
+// const b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (let i = 0; i < 10; i++) {
+//   setTimeout(() => console.log(b[i]), 1000);
+// }
+
+// for (var i = 0; i < 10; i++) {
+//   setTimeout(() => console.log(b[i]), 1000);
+// }
+
+// Result:
+// 1,2,3,4,5,6,7,8,9,10
+// 1,1,1,1,1,1,1,1,1,1  //This will give you all undefined
+
+
+//Find non-repeating character
+// input: virajForviraj, OutPut: F,o
+
+// -> Object turn into arr of elem and check includes function and store in newArr to return expected result
+
+function nonRepeatingChar(str){
+    let res = Object.values(str)
+    console.log(res)
+    let result=''
+    
+    for(let ch of str){
+        if(str.indexOf(ch) === str.lastIndexOf(ch)){
+            result += ch;
+        }
+    }
+    
+    return result
+}
+
+console.log(nonRepeatingChar('virajForviraj'))
+
+
+
+
