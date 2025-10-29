@@ -1188,6 +1188,36 @@ console.log(rotateNumsAr(inputArr, 10))
 
 /////-------------Bitkraft-----------
 //R1 =>
+
+// arr1 = [2,1,3,4,4,4,0]
+// arr2 = [4,4,2,1,0,3]
+ 
+// arr1 = [1,2,3,4,5]
+// arr2 = [1,2,3]
+
+function isArrIdentical(arr1,arr2){
+    let checkIdentical=true
+    let count=0
+    
+    for(let i=0; i<arr2.length;i++){
+            console.log(arr2[i])
+        if(!arr1.includes(arr2[i])){
+            checkIdentical = false
+        }
+    }
+    return checkIdentical
+}
+
+
+console.log('1example',isArrIdentical([1,2,3,4,5],[1,2,3]))
+console.log('2example',isArrIdentical([2,1,3,4,4,4,0],[4,4,2,1,0,3]))
+
+
+--GeometryId-123
+
+SELECT stud.studentName FROM students as stud
+INNER JOIN subjects as sub WHERE sub.id='123'
+
 //R2 =>
 //write a state mgmt callback function => useState
 import useState from 'react'
