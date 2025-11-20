@@ -1614,39 +1614,49 @@ let input = [
 function findDayOfWeek(input){
 	let inputKeys = Object.map((data) => {
     let res = []
-			let dataArr = Object.entries(data.DayOfWeek)
-			//result: ["Monday", "Tuesday", "Wednesday"]
-			
+	let dataArr = Object.entries(data.DayOfWeek)			
 		for(let i=0; i<dataArr.length;i++){
 	       res.push({'DayofWeek': dataArr[i], 
 		   'PreferenceType': data.PreferenceType})
       }
-
 	return res.sort((a,b) => a.DayofWeek-b.DayofWeek)
-})	
+})}
+
+//Correct Code:
+function findDayOfWeek(input){
+    let res = []
+    for(let i=0; i<input.length;i++){
+	 let dataArr = input[i].DayofWeek
+		for(let j=0; j<dataArr.length;j++){
+	       res.push({'DayofWeek': dataArr[j], 
+		   'PreferenceType': input[i].PreferenceType})
+      }
+	}
+   
+  // weekday ordering
+  const order = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ];
+
+  return res.sort(
+    (a, b) => order.indexOf(a.DayofWeek) - order.indexOf(b.DayofWeek)
+  );
 }
 
-/*
-Output:-
-[{
-            "DayofWeek": "Monday",
-            "PreferenceType": "Call Center"
-      }, {
-            "DayofWeek": "Tuesday",
-            "PreferenceType": "Call Center"
-      }, {
-            "DayofWeek": "Wednesday",
-            "PreferenceType": "Call Center"
-      }, {
-            "DayofWeek": "Thursday",
-            "PreferenceType": "Centralized"
-      }, {
-            "DayofWeek": "Friday",
-            "PreferenceType": "Centralized"
-      }, {
-            "DayofWeek": "Sunday",
-            "PreferenceType": "Directly To Contractors"
-      }
+/*Output:-
+[
+  { DayofWeek: 'Monday', PreferenceType: 'Call Center' },
+  { DayofWeek: 'Tuesday', PreferenceType: 'Call Center' },
+  { DayofWeek: 'Wednesday', PreferenceType: 'Call Center' },
+  { DayofWeek: 'Thursday', PreferenceType: 'Centralized' },
+  { DayofWeek: 'Friday', PreferenceType: 'Centralized' },
+  { DayofWeek: 'Sunday', PreferenceType: 'Directly To Contractors' }
 ]
 */
 
