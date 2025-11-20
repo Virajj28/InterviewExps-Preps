@@ -1561,6 +1561,93 @@ function nonRepeatingChar(str){
 
 console.log(nonRepeatingChar('virajForviraj'))
 
+--------
+// NUPI
+--------
+async function inner() {
+    console.log("A");
+    await Promise.resolve();
+    console.log("B");
+}
 
+async function outer() {
+    console.log("C");
+    await inner();
+    console.log("D");
+}
+
+console.log("E");
+setTimeout(() => console.log("F"), 0);
+outer();
+console.log("G");
+
+Result:
+ECAGBDF
+
+------------
+// Ezaxe
+------------
+Promise.resolve(1)
+  .then((x) => x + 1)
+  .then((x) => { throw new Error('My Error') })
+  .catch(() => 1)
+  .then((x) => x + 1)
+  .then((x) => console.log(x))
+  .catch(console.error)
+
+let input = [
+      {
+            "DayofWeek": ["Sunday"],
+            "PreferenceType": "Directly To Contractors"
+      }, {
+            "PreferencePOC": "us-east-1:1a234997-dabe-4676-8619-9e65f6f88d27",
+            "DayofWeek": ["Thursday", "Friday"],
+            "PreferenceType": "Centralized",
+      }, {
+            "PreferenceType": "Call Center",
+            "DayofWeek": ["Monday", "Tuesday", "Wednesday"],
+            "PreferencePOC": "us-east-1:ec10982d-bb87-418e-9110-4084101dffac",
+      }
+];
+
+//Code:
+function findDayOfWeek(input){
+	let inputKeys = Object.map((data) => {
+    let res = []
+			let dataArr = Object.entries(data.DayOfWeek)
+			//result: ["Monday", "Tuesday", "Wednesday"]
+			
+		for(let i=0; i<dataArr.length;i++){
+	       res.push({'DayofWeek': dataArr[i], 
+		   'PreferenceType': data.PreferenceType})
+      }
+
+	return res.sort((a,b) => a.DayofWeek-b.DayofWeek)
+})	
+}
+
+/*
+Output:-
+[{
+            "DayofWeek": "Monday",
+            "PreferenceType": "Call Center"
+      }, {
+            "DayofWeek": "Tuesday",
+            "PreferenceType": "Call Center"
+      }, {
+            "DayofWeek": "Wednesday",
+            "PreferenceType": "Call Center"
+      }, {
+            "DayofWeek": "Thursday",
+            "PreferenceType": "Centralized"
+      }, {
+            "DayofWeek": "Friday",
+            "PreferenceType": "Centralized"
+      }, {
+            "DayofWeek": "Sunday",
+            "PreferenceType": "Directly To Contractors"
+      }
+]
+*/
 
 
