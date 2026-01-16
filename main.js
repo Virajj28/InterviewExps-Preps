@@ -1660,4 +1660,106 @@ function findDayOfWeek(input){
 ]
 */
 
+----2026---------
+---Ninja Studio----
 
+-Hoisting
+- Promise.all , Promise.race
+- MySQL vs NOSQL
+- Transactions
+
+1.
+var x = 10;
+    
+    function test()
+    {
+        if (x > 20) {
+            var x = 50;
+        }
+        console.log(x);
+    }
+    
+    // test();
+    // ans=> 10
+
+2.
+var obj = {
+  i: 10,
+  b: () => console.log(this.i, this),
+  c: function() {
+    console.log(this.i, this);
+  }
+};
+
+ obj.b(); 
+bj.c();
+
+//ans 
+// undefined
+// 10, function()
+
+3.
+// Write a function that takes in an array of integers and returns a boolean representing whether the array is monotonic.
+// An array is said to be monotonic if its elements, from left to right, are entirely non-increasing or entirely non-decreasing.
+// Non-increasing elements aren't necessarily exclusively decreasing; they simply don't increase.
+// Similarly, non-decreasing elements aren't necessarily exclusively increasing; they simply don't decrease.
+// Note that empty arrays and arrays of one element are monotonic.
+// 
+
+function checkMonotonic (arr){
+    let isMonotonic = false
+    
+    if(Array.isArray(arr) && !arr.length){ return true}
+
+    for(let i =0; i<arr.length;i++){
+        console.log(arr[i], arr[i+1])
+        if(arr[i] < arr[i+1] || arr[i] > arr[i+1]){
+            isMonotonic = true
+        }
+    }
+    return isMonotonic
+}
+
+Correct: 
+function checkMonotonic(arr) {
+  let isIncreasing = true;
+  let isDecreasing = true;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    console.log(arr[i], arr[i + 1]);
+
+    if (arr[i] < arr[i + 1]) {
+      isDecreasing = false;
+    }
+
+    if (arr[i] > arr[i + 1]) {
+      isIncreasing = false;
+    }
+  }
+
+  return isIncreasing || isDecreasing;
+}
+
+
+// console.log('1st',checkMonotonic([
+//      -1,    -5,   -10,
+//   -1100, -1100, -1101,
+//   -1102, -9001
+// ]))
+// console.log('2nd',checkMonotonic([
+//      1,    5,   10,
+//   1100, 1101, 1102,
+//   9001
+// ]))
+// console.log('3rd',checkMonotonic([
+//   -1,  -1,  -2, -3, -4, -5,
+//   -5,  -5,  -6, -7, -8, -7,
+//   -9, -10, -11
+// ]))
+console.log('4th',checkMonotonic([1, 2, 3, 2, 4]))
+
+//DBMS
+SELECT pg.page_id FROM pages pg 
+LEFT JOIN page_likes pgl ON pg.page_id = pgl.page_id 
+WHERE pgl.page_id is NULL
+ORDER BY pg.page_id ASC;
