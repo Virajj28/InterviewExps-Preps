@@ -1763,3 +1763,25 @@ SELECT pg.page_id FROM pages pg
 LEFT JOIN page_likes pgl ON pg.page_id = pgl.page_id 
 WHERE pgl.page_id is NULL
 ORDER BY pg.page_id ASC;
+
+
+--------Tekonika Technologies-------
+Explain React Lifecycle using useEffect
+Difference between using useMemo and react.createMemo
+Redux, useReducer
+Custom utilities VS React Hooks
+
+console.log(y)
+y = 'local'
+
+console.log('End');
+setTimeout(() => console.log('Timeout 1'), 0);
+Promise.resolve().then(() => console.log('Promise 1'));
+setTimeout(() => console.log('Timeout 2'), 0);
+console.log('Start');
+Result:
+End
+Start
+Promise 1
+Timeout 1
+Timeout 2
