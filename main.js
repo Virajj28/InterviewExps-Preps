@@ -1765,10 +1765,11 @@ WHERE pgl.page_id is NULL
 ORDER BY pg.page_id ASC;
 
 
---------Tekonika Technologies-------
+//--------Tekonika Technologies-------
 Explain React Lifecycle using useEffect
 Difference between using useMemo and react.createMemo
 Redux, useReducer
+Define me usage of Redux in real-life application and how
 Custom utilities VS React Hooks
 
 console.log(y)
