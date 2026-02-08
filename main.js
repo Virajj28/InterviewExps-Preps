@@ -1765,6 +1765,7 @@ WHERE pgl.page_id is NULL
 ORDER BY pg.page_id ASC;
 
 
+//-----2026-----
 //--------Tekonika Technologies-------
 Explain React Lifecycle using useEffect
 Difference between using useMemo and react.createMemo
@@ -1786,3 +1787,20 @@ Start
 Promise 1
 Timeout 1
 Timeout 2
+
+///-------Pure billion technolgoies//
+// Write a function that sorts the following and returns the sorted array
+// Ordering an array - [the array with the least sum of its numbers comes first]
+// const X = [99, 22, -42, [3, 2, 0], 98, 100, [1001,20, 231]
+//  output = [-42, 22, 98, 99, 100, [O, 2, 3], [20, 23, 1001]]
+
+
+//Another Ques was product with sorting nested arr ele 
+
+
+//----LearningMate----//
+What is Nodejs
+Multithreading and workers in nodejs
+Nodejs is single threaded
+
+
