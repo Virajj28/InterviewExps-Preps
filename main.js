@@ -1803,4 +1803,21 @@ What is Nodejs
 Multithreading and workers in nodejs
 Nodejs is single threaded
 
+//--Tekonika--//
+Let's say there are a couple of reels which we scroll. Okay, so once we scroll a reel one and we are now on reel two. 
+So, if you want to go back on reel one once again, visit it. 
+Instagram doesn't let you give once again a loading sign. Okay, so how does it manage this?
+- https://chatgpt.com/share/6991815a-0ae0-8011-a6bd-c7df186aceb9
+
+Interface and types in TS
+Partial and Omit in TS
+PgBouncer
+When Mongodb and Postgres we should choose
+//Desgin comment section:
+postsDb =>
+id| post(primary key)| userId(foreignkey from users db)
+One Post to Many relationship with Comments Db
+Comments Db => 
+id| postId(foreign key from posts db)| comment | followedComment(null)|
+
 
